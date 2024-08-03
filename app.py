@@ -25,7 +25,7 @@ if uploaded_file is not None:
         img = PILImage.create(uploaded_file) # type: ignore
         
         # Load the model
-        model_path = '/Users/mak/Desktop/course_2023/DataScience/Recap_alls/Transport/transport_model.pkl'
+        model_path = '/Users/mak/Desktop/course_2023/DataScience/TransportClassification-1-main/transport_model.pkl'
         model = load_learner(model_path) # type: ignore
         
         # Predict the image
