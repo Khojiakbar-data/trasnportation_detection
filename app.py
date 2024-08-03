@@ -1,7 +1,7 @@
-import streamlit as st
-from PIL import Image
-from fastai.vision.all import *
-import plotly.express as px
+import streamlit as st # type: ignore
+from PIL import Image # type: ignore
+from fastai.vision.all import * # type: ignore
+import plotly.express as px # type: ignore
 # Title
 st.title("Classification Report for Transport")
 
@@ -22,11 +22,11 @@ if uploaded_file is not None:
         
         # Convert the uploaded file to fastai's PILImage
         uploaded_file.seek(0)  # Ensure the file pointer is at the beginning again
-        img = PILImage.create(uploaded_file)
+        img = PILImage.create(uploaded_file) # type: ignore
         
         # Load the model
         model_path = '/Users/mak/Desktop/course_2023/DataScience/Recap_alls/Transport/transport_model.pkl'
-        model = load_learner(model_path)
+        model = load_learner(model_path) # type: ignore
         
         # Predict the image
         pred_class, pred_idx, outputs = model.predict(img)
